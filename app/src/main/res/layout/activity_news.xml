@@ -20,14 +20,27 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="52dp"
-        android:layout_height="44dp"
+        android:layout_width="36dp"
+        android:layout_height="33dp"
         android:onClick="onBackBtnClicked"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.005"
+        app:layout_constraintHorizontal_bias="0.042"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.001"
+        app:layout_constraintVertical_bias="0.011"
         app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+        
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:text="News"
+        android:textColor="@color/totalCases"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/news_recycler"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

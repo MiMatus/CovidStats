@@ -11,6 +11,7 @@
         android:layout_width="411dp"
         android:layout_height="54dp"
         android:fontFamily="casual"
+        android:gravity="center_vertical"
         android:text="TextView"
         android:textColor="@color/totalCases"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -23,7 +24,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView_1"
         android:layout_width="412dp"
-        android:layout_height="9dp"
+        android:layout_height="1dp"
         app:cardCornerRadius="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,7 +36,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#FF5722">
+            android:background="#FFFFFF">
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
