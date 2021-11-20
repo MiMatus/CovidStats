@@ -48,7 +48,7 @@ import mat0370.covid_stats.api.DataFetcher;
 import mat0370.covid_stats.api.Article;
 import mat0370.covid_stats.db.DBHelper;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements ActivityCompat.OnRequestPermissionsResultCallback {
 
     List<Country> history = new ArrayList<>();
     Country country;
@@ -81,7 +81,11 @@ public class MainActivity extends AppCompatActivity {
                     ef.printStackTrace();
                 }
             } else {
-                locationRequest();
+                if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 44);
+                } else {
+                    locationRequest();
+                }            
             }
         }
     }
@@ -153,6 +157,7 @@ public class MainActivity extends AppCompatActivity {
         pieChart.setEntryLabelTextSize(12f);
         pieChart.setDrawHoleEnabled(true);
         pieChart.setHoleColor(getResources().getColor(R.color.bg));
+        pieChart.setNoDataText("Generating graph...");
         pieChart.invalidate();
     }
 
@@ -179,6 +184,7 @@ public class MainActivity extends AppCompatActivity {
         pieChart.setEntryLabelTextSize(12f);
         pieChart.setDrawHoleEnabled(true);
         pieChart.setHoleColor(getResources().getColor(R.color.bg));
+        pieChart.setNoDataText("Generating graph...");
         pieChart.invalidate();
     }
 
@@ -241,7 +247,7 @@ public class MainActivity extends AppCompatActivity {
         lineChart.getLegend().setTextColor(Color.WHITE);
         lineChart.getLegend().setHorizontalAlignment(Legend.LegendHorizontalAlignment.CENTER);
         lineChart.setData(lineData);
-
+        lineChart.setNoDataText("Generating graph...")
         lineChart.invalidate();
     }
 
@@ -290,7 +296,7 @@ public class MainActivity extends AppCompatActivity {
         lineChart.getLegend().setTextColor(Color.WHITE);
         lineChart.getLegend().setHorizontalAlignment(Legend.LegendHorizontalAlignment.CENTER);
         lineChart.setData(lineData);
-
+        lineChart.setNoDataText("Generating graph...");
         lineChart.invalidate();
     }
 
@@ -321,8 +327,15 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
 
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults){
+        locationRequest();
+    }
+
     public void locationRequest() {
         LocationRequest mLocationRequest = LocationRequest.create();
+        mLocationRequest.setInterval(999999999);
+        mLocationRequest.setFastestInterval(999999999);        
         mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
         LocationCallback mLocationCallback = new LocationCallback() {
             @Override
