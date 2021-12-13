@@ -247,7 +247,7 @@ public class MainActivity extends AppCompatActivity implements ActivityCompat.On
         lineChart.getLegend().setTextColor(Color.WHITE);
         lineChart.getLegend().setHorizontalAlignment(Legend.LegendHorizontalAlignment.CENTER);
         lineChart.setData(lineData);
-        lineChart.setNoDataText("Generating graph...")
+        lineChart.setNoDataText("Generating graph...");
         lineChart.invalidate();
     }
 
