@@ -47,8 +47,8 @@ public class Settings extends AppCompatActivity {
 
     private void initRecyclerView() {
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
-        CountiresRecyclerViewAdapter countiresRecyclerViewAdapter = new CountiresRecyclerViewAdapter(this, countries);
-        recyclerView.setAdapter(countiresRecyclerViewAdapter);
+        CountriesRecyclerViewAdapter countriesRecyclerViewAdapter = new CountriesRecyclerViewAdapter(this, countries);
+        recyclerView.setAdapter(countriesRecyclerViewAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         SearchView searchView = findViewById(R.id.search);
@@ -63,7 +63,7 @@ public class Settings extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(final String newText) {
-                countiresRecyclerViewAdapter.getCountryFilter().filter(newText);
+                countriesRecyclerViewAdapter.getCountryFilter().filter(newText);
                 return false;
             }
         });

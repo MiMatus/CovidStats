@@ -20,14 +20,14 @@ import java.util.stream.Collectors;
 import mat0370.covid_stats.api.Country;
 import mat0370.covid_stats.db.DBHelper;
 
-public class CountiresRecyclerViewAdapter extends RecyclerView.Adapter<CountiresRecyclerViewAdapter.ViewHolder> {
+public class CountriesRecyclerViewAdapter extends RecyclerView.Adapter<CountriesRecyclerViewAdapter.ViewHolder> {
 
     private Context mContext;
     private List<Country> countries;
     private List<Country> countiresFull;
 
 
-    public CountiresRecyclerViewAdapter(final Context mContext, final List<Country> countries) {
+    public CountriesRecyclerViewAdapter(final Context mContext, final List<Country> countries) {
         this.mContext = mContext;
         this.countries = countries;
         countiresFull = Lists.newArrayList(countries);
