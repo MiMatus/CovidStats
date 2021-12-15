@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.concurrent.ExecutionException;
 
 import mat0370.covid_stats.api.Article;
-import mat0370.covid_stats.api.DataFetcher;
+import mat0370.covid_stats.api.NewsFetcher;
 
 public class News extends AppCompatActivity {
 
@@ -32,9 +32,9 @@ public class News extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        DataFetcher dataFetcher = new DataFetcher();
+        NewsFetcher newsFetcher = new NewsFetcher();
         try {
-            articles = dataFetcher.getNews().get();
+            articles = newsFetcher.fetchNews().get();
         } catch (ExecutionException | InterruptedException e) {
             articles = null;
         }

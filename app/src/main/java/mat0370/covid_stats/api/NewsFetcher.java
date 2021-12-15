@@ -25,22 +25,17 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-public class DataFetcher {
-    private static final String STATISTICS = "https://covid-193.p.rapidapi.com/statistics";
-    private static final String STATISTICS_COUNTRY = "https://covid-193.p.rapidapi.com/statistics?country=";
-    private static final String HISTORY = "https://covid-193.p.rapidapi.com/history?country=";
+public class NewsFetcher {
+
     private static final String NEWS = "https://newsapi.org/v2/everything?q=covid&apiKey=840e23f8dd984fb98ad10b01f67146e7";
-    private static final String HOST = "covid-193.p.rapidapi.com";
-    private static final String KEY = "195a93e6eemsha12f3dd4a3db7fdp1411d9jsn324ff2434bd0";
 
     private ExecutorService executorService = Executors.newSingleThreadExecutor();
 
 
-    public DataFetcher() {
+    public NewsFetcher() {
     }
 
-
-    public Future<List<Article>> getNews() {
+    public Future<List<Article>> fetchNews() {
         return executorService.submit(() -> {
             final OkHttpClient client = new OkHttpClient();
             Request request = new Request.Builder()
