@@ -44,8 +44,7 @@ import java.util.Objects;
 import java.util.concurrent.ExecutionException;
 
 import mat0370.covid_stats.api.Country;
-import mat0370.covid_stats.api.DataFetcher;
-import mat0370.covid_stats.api.Article;
+import mat0370.covid_stats.api.CountryFetcher;
 import mat0370.covid_stats.db.DBHelper;
 
 public class MainActivity extends AppCompatActivity implements ActivityCompat.OnRequestPermissionsResultCallback {
@@ -92,14 +91,14 @@ public class MainActivity extends AppCompatActivity implements ActivityCompat.On
 
     @SuppressLint("RestrictedApi")
     private void loadData(final String countryName) throws ExecutionException, InterruptedException {
-        DataFetcher dataFetcher = new DataFetcher();
+        CountryFetcher countryFetcher = new CountryFetcher();
         try {
-            country = dataFetcher.fetchCountry(countryName).get().get(0);
+            country = countryFetcher.fetchCountry(countryName).get().get(0);
         } catch (ExecutionException | InterruptedException e) {
             country = null;
         }
 
-        history = dataFetcher.fetchCountryHistory(countryName).get();
+        history = countryFetcher.fetchCountryHistory(countryName).get();
         globalName = countryName;
         render();
     }

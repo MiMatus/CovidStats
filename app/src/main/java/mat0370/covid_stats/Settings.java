@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.concurrent.ExecutionException;
 
 import mat0370.covid_stats.api.Country;
-import mat0370.covid_stats.api.DataFetcher;
+import mat0370.covid_stats.api.CountryFetcher;
 
 public class Settings extends AppCompatActivity {
 
@@ -34,9 +34,9 @@ public class Settings extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        DataFetcher dataFetcher = new DataFetcher();
+        CountryFetcher countryFetcher = new CountryFetcher();
         try {
-            countries = dataFetcher.fetchData().get();
+            countries = countryFetcher.fetchCountries().get();
         } catch (ExecutionException | InterruptedException e) {
             countries = null;
         }
