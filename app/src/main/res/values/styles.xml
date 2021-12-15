@@ -9,7 +9,7 @@
     </style>
 
     <style name="ThemeOverlayToobar" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="android:editTextColor">@color/totalCases</item>
+        <item name="android:editTextColor">@color/textImportant</item>
     </style>
 
 </resources>

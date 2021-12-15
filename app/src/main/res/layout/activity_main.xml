@@ -15,16 +15,16 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#3D2C59"
+        android:background="@color/mainBg"
         tools:layout_editor_absoluteY="1dp">
 
         <TextView
             android:id="@+id/text_view_id"
             android:layout_width="183dp"
             android:layout_height="36dp"
-            android:fontFamily="casual"
+            android:fontFamily="@font/roboto_medium"
             android:text="Covid Stats"
-            android:textColor="#FF5722"
+            android:textColor="@color/textImportant"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintHorizontal_bias="0.063"
@@ -37,10 +37,10 @@
             android:id="@+id/country_name"
             android:layout_width="345dp"
             android:layout_height="39dp"
-            android:fontFamily="casual"
+            android:fontFamily="@font/roboto_medium"
             android:text="Locating Your Country..."
             android:textAlignment="center"
-            android:textColor="#FF5722"
+            android:textColor="@color/textImportant"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintHorizontal_bias="0.501"
@@ -64,7 +64,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#FF5722">
+                android:background="@color/textImportant">
 
                 <TextView
                     android:id="@+id/text1"
@@ -377,7 +377,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#474040">
+                android:background="@color/bg">
 
                 <TextView
                     android:id="@+id/text8"
@@ -422,7 +422,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#474040">
+                android:background="@color/bg">
 
                 <com.github.mikephil.charting.charts.PieChart
                     android:id="@+id/piechart"
@@ -457,7 +457,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#474040">
+                android:background="@color/bg">
 
                 <com.github.mikephil.charting.charts.LineChart
                     android:id="@+id/linechart_1"
@@ -468,8 +468,10 @@
                     android:layout_marginEnd="5dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0">
 
                 </com.github.mikephil.charting.charts.LineChart>
 
@@ -493,7 +495,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#474040">
+                android:background="@color/bg">
 
                 <com.github.mikephil.charting.charts.LineChart
                     android:id="@+id/linechart_2"
@@ -528,7 +530,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#474040">
+                android:background="@color/bg">
 
                 <com.github.mikephil.charting.charts.PieChart
                     android:id="@+id/piechart_2"
@@ -551,8 +553,8 @@
             android:id="@+id/btn_week"
             android:layout_width="72dp"
             android:layout_height="24dp"
-            android:background="#E64A19"
-            android:fontFamily="casual"
+            android:background="@color/activeElement"
+            android:fontFamily="@font/roboto_medium"
             android:onClick="weekBtnOnClick"
             android:text="WEEK"
             android:textColor="@android:color/white"
@@ -567,8 +569,8 @@
             android:id="@+id/btn_month"
             android:layout_width="72dp"
             android:layout_height="24dp"
-            android:background="#E64A19"
-            android:fontFamily="casual"
+            android:background="@color/activeElement"
+            android:fontFamily="@font/roboto_medium"
             android:onClick="monthBtnOnClick"
             android:text="MONTH"
             android:textColor="@android:color/white"
@@ -582,8 +584,8 @@
             android:id="@+id/btn_3_months"
             android:layout_width="72dp"
             android:layout_height="24dp"
-            android:background="#E64A19"
-            android:fontFamily="casual"
+            android:background="@color/activeElement"
+            android:fontFamily="@font/roboto_medium"
             android:onClick="threeMonthsBtnOnClick"
             android:text="3 MONTHS"
             android:textColor="@android:color/white"
@@ -600,9 +602,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="19dp"
             android:layout_marginBottom="81dp"
-            android:fontFamily="casual"
+            android:fontFamily="@font/roboto_light"
             android:text="Generate graphs for the last"
-            android:textColor="#FF5722"
+            android:textColor="@color/textImportant"
             android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/cardView_10"
             app:layout_constraintEnd_toEndOf="parent"
@@ -628,9 +630,9 @@
             android:id="@+id/rates"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="casual"
+            android:fontFamily="@font/roboto_light"
             android:text="Current Rates"
-            android:textColor="#FF5722"
+            android:textColor="@color/textImportant"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

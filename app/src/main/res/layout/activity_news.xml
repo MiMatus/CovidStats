@@ -5,7 +5,7 @@
     android:id="@+id/news_constraint"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3D2C59"
+    android:background="@color/mainBg"
     tools:context=".News">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -14,6 +14,7 @@
         android:layout_height="676dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
@@ -30,14 +31,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.011"
         app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
-        
+
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="casual"
+        android:fontFamily="@font/roboto_medium"
         android:text="News"
-        android:textColor="@color/totalCases"
+        android:textColor="@color/textImportant"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/news_recycler"
         app:layout_constraintEnd_toEndOf="parent"

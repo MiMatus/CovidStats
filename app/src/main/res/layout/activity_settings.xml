@@ -5,17 +5,17 @@
     android:id="@+id/list_constraint"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3D2C59"
+    android:background="@color/mainBg"
     android:windowSoftInputMode="adjustPan"
-tools:context=".Settings">
+    tools:context=".Settings">
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="casual"
+        android:fontFamily="@font/roboto_medium"
         android:text="Choose Country"
-        android:textColor="@color/totalCases"
+        android:textColor="@color/textImportant"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/recycler_view"
         app:layout_constraintEnd_toEndOf="parent"
