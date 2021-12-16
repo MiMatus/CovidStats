@@ -1,4 +1,5 @@
 # CovidStats
+
  Android app which provides simple view for current covid-19 disease data
 
 - Provides list of all world countries that have data available
@@ -17,6 +18,10 @@
 ![Homepage](screenshots/screen-main.png "Main Activity")
 ![Settings](screenshots/screen-settings.png "Settings Activity")
 ![News](screenshots/screen-news.png "News Activity")
+
+## Notes
+
+- Project is using [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/), all other githooks (devmoji, auto versioning) are dependent on them
 
 ### Resources
 
